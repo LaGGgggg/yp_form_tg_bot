@@ -49,7 +49,7 @@ class UserInfoManager:
             except JSONDecodeError:
                 self.all_users_data = default_all_users_data
 
-            self.current_user_data = self.all_users_data['users'][self.user_id]
+            self.current_user_data = self.all_users_data['users'].get(self.user_id, self.default_user_data)
 
     def __enter__(self):
         return self
