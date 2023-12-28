@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Callable
 
 
-@dataclass
+@dataclass(frozen=True)
 class Weights:
 
     complexity: int = 0
